@@ -57,7 +57,7 @@ export function ParticleBackground({ mouse }: ParticleBackgroundProps) {
           key={`drift-${node.id}`}
           className="digital-particle"
           animate={{ x: [0, 18, -10, 0], y: [0, -12, 8, 0], opacity: [0.35, 0.7, 0.45, 0.35], scale: [0.9, 1.2, 0.95] }}
-          transition={{ duration: 8 + (node.id % 5), repeat: Infinity, ease: 'easeInOut', delay: node.delay }}
+          transition={{ duration: 8 + (node.id % 5), repeat: Infinity, ease: 'easeInOut', delay: parseFloat(node.delay) }}
           style={{ left: `${node.x}%`, top: `${node.y}%` }}
         />
       ))}
